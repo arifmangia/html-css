@@ -3,25 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mangia Auto Motors | Luxury Vehicles</title>
+<title>Mangia Motors | Luxury Japanese & German Vehicles</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
 --primary: #1a1a2e;
 --secondary: #16213e;
---accent: #ff5722;
+--accent: #d4af37;
 --light: #f0f0f0;
 --dark: #0d0d1a;
 }
 
 body {
+font-family: 'Montserrat', sans-serif;
 background: linear-gradient(135deg, var(--dark), var(--primary));
 color: var(--light);
 line-height: 1.6;
@@ -44,7 +45,7 @@ width: 100%;
 top: 0;
 z-index: 1000;
 backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(255, 87, 34, 0.3);
+border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .header-content {
@@ -56,20 +57,20 @@ align-items: center;
 .logo {
 display: flex;
 align-items: center;
-gap: 10px;
+gap: 15px;
 }
 
 .logo i {
 color: var(--accent);
-font-size: 2rem;
+font-size: 2.2rem;
 }
 
 .logo h1 {
-font-size: 1.8rem;
+font-family: 'Playfair Display', serif;
+font-size: 2.2rem;
 font-weight: 700;
-background: linear-gradient(to right, #ff5722, #ff9800);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+color: var(--accent);
+letter-spacing: 1px;
 }
 
 nav ul {
@@ -89,6 +90,9 @@ padding: 8px 15px;
 border-radius: 4px;
 transition: all 0.3s;
 position: relative;
+text-transform: uppercase;
+font-size: 0.9rem;
+letter-spacing: 1px;
 }
 
 nav ul li a:hover {
@@ -132,7 +136,6 @@ z-index: -1;
 }
 
 .hero-content {
-text-align: center;
 max-width: 800px;
 margin: 0 auto;
 padding: 20px;
@@ -140,21 +143,24 @@ z-index: 1;
 }
 
 .hero h2 {
-font-size: 3.5rem;
+font-family: 'Playfair Display', serif;
+font-size: 3.8rem;
 margin-bottom: 20px;
 letter-spacing: 1px;
+line-height: 1.2;
 }
 
 .hero p {
-font-size: 1.2rem;
+font-size: 1.3rem;
 margin-bottom: 40px;
 opacity: 0.9;
+max-width: 600px;
 }
 
 .btn {
 display: inline-block;
 background: var(--accent);
-color: white;
+color: var(--primary);
 padding: 14px 35px;
 text-decoration: none;
 border-radius: 30px;
@@ -164,51 +170,63 @@ transition: all 0.3s;
 text-transform: uppercase;
 letter-spacing: 1px;
 border: 2px solid var(--accent);
-margin: 0 10px;
+margin: 10px 10px 10px 0;
 }
 
 .btn:hover {
 background: transparent;
+color: var(--accent);
 transform: translateY(-5px);
-box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
 }
 
 .btn-outline {
 background: transparent;
 border: 2px solid var(--accent);
+color: var(--accent);
 }
 
 .btn-outline:hover {
 background: var(--accent);
+color: var(--primary);
 }
 
 /* Brands Section */
 .brands {
-padding: 60px 0;
+padding: 80px 0;
 background: rgba(10, 10, 20, 0.7);
 }
 
 .section-title {
 text-align: center;
-margin-bottom: 50px;
+margin-bottom: 60px;
 }
 
 .section-title h2 {
-font-size: 2.5rem;
+font-family: 'Playfair Display', serif;
+font-size: 2.8rem;
 margin-bottom: 15px;
 position: relative;
 display: inline-block;
+color: var(--accent);
 }
 
 .section-title h2::after {
 content: '';
 position: absolute;
-bottom: -10px;
+bottom: -15px;
 left: 50%;
 transform: translateX(-50%);
-width: 80px;
+width: 100px;
 height: 3px;
 background: var(--accent);
+}
+
+.section-title p {
+font-size: 1.2rem;
+opacity: 0.8;
+max-width: 700px;
+margin: 25px auto 0;
 }
 
 .brands-grid {
@@ -216,6 +234,7 @@ display: flex;
 justify-content: center;
 flex-wrap: wrap;
 gap: 40px;
+margin-top: 40px;
 }
 
 .brand-card {
@@ -231,7 +250,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 
 .brand-card:hover {
 transform: translateY(-10px);
-border-color: rgba(255, 87, 34, 0.5);
+border-color: rgba(212, 175, 55, 0.5);
 }
 
 .brand-icon {
@@ -243,17 +262,18 @@ color: var(--accent);
 .brand-card h3 {
 font-size: 1.8rem;
 margin-bottom: 15px;
+color: var(--light);
 }
 
 /* Featured Cars */
 .featured-cars {
-padding: 80px 0;
+padding: 100px 0;
 }
 
 .cars-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 40px;
 margin-top: 50px;
 }
 
@@ -264,23 +284,33 @@ overflow: hidden;
 transition: transform 0.3s;
 backdrop-filter: blur(10px);
 border: 1px solid rgba(255, 255, 255, 0.1);
+position: relative;
 }
 
 .car-card:hover {
 transform: translateY(-10px);
-border-color: rgba(255, 87, 34, 0.5);
+border-color: rgba(212, 175, 55, 0.5);
 }
 
 .car-img {
-height: 220px;
-background: linear-gradient(45deg, #2c3e50, #4a6491);
+height: 240px;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-color: white;
-font-size: 2rem;
-font-weight: bold;
+overflow: hidden;
 position: relative;
+}
+
+.car-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s;
+}
+
+.car-card:hover .car-img img {
+transform: scale(1.05);
 }
 
 .car-img::after {
@@ -293,13 +323,26 @@ height: 60%;
 background: linear-gradient(to top, rgba(26, 26, 46, 0.9), transparent);
 }
 
+.car-model {
+position: absolute;
+bottom: 20px;
+left: 20px;
+z-index: 2;
+color: white;
+font-size: 1.8rem;
+font-weight: bold;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+font-family: 'Playfair Display', serif;
+}
+
 .car-info {
 padding: 25px;
 }
 
 .car-info h3 {
-font-size: 1.6rem;
+font-size: 1.8rem;
 margin-bottom: 10px;
+color: var(--accent);
 }
 
 .car-price {
@@ -320,32 +363,39 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
 .spec {
 text-align: center;
+flex: 1;
 }
 
 .spec i {
 color: var(--accent);
-font-size: 1.2rem;
-margin-bottom: 5px;
+font-size: 1.4rem;
+margin-bottom: 8px;
+}
+
+.spec p {
+font-size: 0.95rem;
 }
 
 /* About Section */
 .about {
-padding: 80px 0;
+padding: 100px 0;
 background: rgba(10, 10, 20, 0.7);
 }
 
 .about-content {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 50px;
+gap: 60px;
 align-items: center;
 }
 
 .about-text h2 {
-font-size: 2.5rem;
+font-family: 'Playfair Display', serif;
+font-size: 2.8rem;
 margin-bottom: 25px;
 position: relative;
 padding-bottom: 15px;
+color: var(--accent);
 }
 
 .about-text h2::after {
@@ -362,6 +412,7 @@ background: var(--accent);
 margin-bottom: 20px;
 font-size: 1.1rem;
 opacity: 0.9;
+line-height: 1.8;
 }
 
 .about-features {
@@ -370,45 +421,50 @@ margin-top: 30px;
 
 .feature {
 display: flex;
-align-items: center;
-margin-bottom: 15px;
+align-items: flex-start;
+margin-bottom: 20px;
 }
 
 .feature i {
 color: var(--accent);
-font-size: 1.2rem;
+font-size: 1.4rem;
 margin-right: 15px;
+margin-top: 5px;
 }
 
 .about-image {
-background: linear-gradient(45deg, #2c3e50, #4a6491);
-height: 400px;
+height: 450px;
 border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 2rem;
-color: white;
-position: relative;
 overflow: hidden;
+position: relative;
+box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.about-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 /* Contact Section */
 .contact {
-padding: 80px 0;
+padding: 100px 0;
 }
 
 .contact-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 50px;
+gap: 60px;
 margin-top: 50px;
 }
 
 .contact-info {
 background: rgba(30, 30, 50, 0.6);
 border-radius: 10px;
-padding: 40px;
+padding: 50px;
 backdrop-filter: blur(10px);
 border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -421,7 +477,7 @@ margin-bottom: 30px;
 
 .contact-icon {
 background: var(--accent);
-color: white;
+color: var(--primary);
 width: 50px;
 height: 50px;
 border-radius: 50%;
@@ -433,14 +489,15 @@ flex-shrink: 0;
 }
 
 .contact-text h4 {
-font-size: 1.3rem;
-margin-bottom: 5px;
+font-size: 1.4rem;
+margin-bottom: 8px;
+color: var(--accent);
 }
 
 .contact-form {
 background: rgba(30, 30, 50, 0.6);
 border-radius: 10px;
-padding: 40px;
+padding: 50px;
 backdrop-filter: blur(10px);
 border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -451,12 +508,14 @@ margin-bottom: 25px;
 
 .form-group label {
 display: block;
-margin-bottom: 8px;
+margin-bottom: 10px;
 font-weight: 500;
+color: var(--light);
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
 width: 100%;
 padding: 15px;
 background: rgba(20, 20, 35, 0.7);
@@ -464,10 +523,12 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 border-radius: 8px;
 color: white;
 font-size: 1rem;
+font-family: 'Montserrat', sans-serif;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
 outline: none;
 border-color: var(--accent);
 }
@@ -475,22 +536,24 @@ border-color: var(--accent);
 /* Footer */
 footer {
 background: rgba(10, 10, 20, 0.9);
-padding: 40px 0 20px;
-border-top: 1px solid rgba(255, 87, 34, 0.3);
+padding: 60px 0 30px;
+border-top: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .footer-content {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-gap: 30px;
-margin-bottom: 40px;
+gap: 40px;
+margin-bottom: 50px;
 }
 
 .footer-column h3 {
-font-size: 1.4rem;
+font-family: 'Playfair Display', serif;
+font-size: 1.6rem;
 margin-bottom: 25px;
 position: relative;
-padding-bottom: 10px;
+padding-bottom: 15px;
+color: var(--accent);
 }
 
 .footer-column h3::after {
@@ -508,7 +571,7 @@ list-style: none;
 }
 
 .footer-links li {
-margin-bottom: 12px;
+margin-bottom: 15px;
 }
 
 .footer-links a {
@@ -516,6 +579,9 @@ color: var(--light);
 text-decoration: none;
 transition: color 0.3s;
 opacity: 0.8;
+display: flex;
+align-items: center;
+gap: 10px;
 }
 
 .footer-links a:hover {
@@ -526,42 +592,50 @@ opacity: 1;
 .social-icons {
 display: flex;
 gap: 15px;
-margin-top: 20px;
+margin-top: 25px;
 }
 
 .social-icons a {
 display: inline-flex;
 align-items: center;
 justify-content: center;
-width: 40px;
-height: 40px;
+width: 45px;
+height: 45px;
 background: rgba(255, 255, 255, 0.1);
 border-radius: 50%;
 color: white;
 transition: all 0.3s;
+font-size: 1.2rem;
 }
 
 .social-icons a:hover {
 background: var(--accent);
 transform: translateY(-5px);
+color: var(--primary);
 }
 
 .copyright {
 text-align: center;
-padding-top: 20px;
+padding-top: 30px;
 border-top: 1px solid rgba(255, 255, 255, 0.1);
 opacity: 0.7;
+font-size: 0.95rem;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
 .about-content,
-.contact-grid {
+.contact-grid,
+.footer-content {
 grid-template-columns: 1fr;
 }
 
-.footer-content {
-grid-template-columns: repeat(2, 1fr);
+.hero h2 {
+font-size: 3rem;
+}
+
+.about-image {
+height: 400px;
 }
 }
 
@@ -574,8 +648,22 @@ display: none;
 font-size: 2.5rem;
 }
 
-.footer-content {
+.section-title h2 {
+font-size: 2.3rem;
+}
+
+.cars-grid {
 grid-template-columns: 1fr;
+}
+
+.brands-grid {
+flex-direction: column;
+align-items: center;
+}
+
+.brand-card {
+width: 100%;
+max-width: 400px;
 }
 }
 </style>
@@ -587,15 +675,15 @@ grid-template-columns: 1fr;
 <div class="header-content">
 <div class="logo">
 <i class="fas fa-car"></i>
-<h1>Mangia Auto Motors</h1>
+<h1>Mangia Motors</h1>
 </div>
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#brands">Brands</a></li>
-<li><a href="#featured">Inventory</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+<li><a href="#brands"><i class="fas fa-flag"></i> Brands</a></li>
+<li><a href="#featured"><i class="fas fa-car-side"></i> Inventory</a></li>
+<li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+<li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
 </ul>
 </nav>
 </div>
@@ -607,7 +695,7 @@ grid-template-columns: 1fr;
 <div class="container">
 <div class="hero-content">
 <h2>Experience Automotive Excellence</h2>
-<p>Mangia Auto Motors specializes in premium Japanese and German engineering. Discover unparalleled performance, luxury, and craftsmanship in every vehicle we offer.</p>
+<p>Mangia Motors specializes in premium Japanese and German engineering. Discover unparalleled performance, luxury, and craftsmanship in every vehicle we offer.</p>
 <div>
 <a href="#featured" class="btn">View Inventory</a>
 <a href="#contact" class="btn btn-outline">Schedule Test Drive</a>
@@ -621,31 +709,31 @@ grid-template-columns: 1fr;
 <div class="container">
 <div class="section-title">
 <h2>Our Premium Brands</h2>
-<p>Exclusive selection of the world's finest automotive manufacturers</p>
+<p>Exclusive selection of the world's finest Japanese and German automotive manufacturers</p>
 </div>
 <div class="brands-grid">
 <div class="brand-card">
 <div class="brand-icon">
 <i class="fas fa-crown"></i>
 </div>
-<h3>Toyota</h3>
-<p>Japanese Reliability & Innovation</p>
+<h3>Lexus</h3>
+<p>Japanese Luxury Redefined</p>
 </div>
 
 <div class="brand-card">
 <div class="brand-icon">
 <i class="fas fa-bolt"></i>
 </div>
-<h3>Lexus</h3>
-<p>Luxury Redefined</p>
+<h3>Infiniti</h3>
+<p>Performance & Innovation</p>
 </div>
 
 <div class="brand-card">
 <div class="brand-icon">
 <i class="fas fa-infinity"></i>
 </div>
-<h3>Infiniti</h3>
-<p>Performance & Elegance</p>
+<h3>Acura</h3>
+<p>Precision Crafted Performance</p>
 </div>
 
 <div class="brand-card">
@@ -684,8 +772,12 @@ grid-template-columns: 1fr;
 </div>
 
 <div class="cars-grid">
+<!-- Japanese Cars -->
 <div class="car-card">
-<div class="car-img">Lexus LC 500</div>
+<div class="car-img">
+<img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lexus LC 500">
+<div class="car-model">Lexus LC 500</div>
+</div>
 <div class="car-info">
 <h3>Lexus LC 500</h3>
 <p>Japanese luxury and performance in a stunning coupe</p>
@@ -711,7 +803,40 @@ grid-template-columns: 1fr;
 </div>
 
 <div class="car-card">
-<div class="car-img">BMW M8</div>
+<div class="car-img">
+<img src="https://images.unsplash.com/photo-1580274437635-89b720d7a9f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mercedes AMG">
+<div class="car-model">Mercedes AMG</div>
+</div>
+<div class="car-info">
+<h3>Mercedes-AMG GT</h3>
+<p>Powerful and sophisticated grand tourer</p>
+<div class="car-price">$115,000</div>
+
+<div class="car-specs">
+<div class="spec">
+<i class="fas fa-tachometer-alt"></i>
+<p>523 HP</p>
+</div>
+<div class="spec">
+<i class="fas fa-gas-pump"></i>
+<p>Gasoline</p>
+</div>
+<div class="spec">
+<i class="fas fa-cogs"></i>
+<p>Automatic</p>
+</div>
+</div>
+
+<a href="#" class="btn">Details</a>
+</div>
+</div>
+
+<!-- German Cars -->
+<div class="car-card">
+<div class="car-img">
+<img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="BMW M8">
+<div class="car-model">BMW M8</div>
+</div>
 <div class="car-info">
 <h3>BMW M8 Competition</h3>
 <p>German engineering at its finest</p>
@@ -737,16 +862,19 @@ grid-template-columns: 1fr;
 </div>
 
 <div class="car-card">
-<div class="car-img">Mercedes AMG</div>
+<div class="car-img">
+<img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80" alt="Audi R8">
+<div class="car-model">Audi R8</div>
+</div>
 <div class="car-info">
-<h3>Mercedes-AMG GT</h3>
-<p>Powerful and sophisticated grand tourer</p>
-<div class="car-price">$115,000</div>
+<h3>Audi R8 V10</h3>
+<p>Iconic supercar with stunning performance</p>
+<div class="car-price">$149,000</div>
 
 <div class="car-specs">
 <div class="spec">
 <i class="fas fa-tachometer-alt"></i>
-<p>523 HP</p>
+<p>602 HP</p>
 </div>
 <div class="spec">
 <i class="fas fa-gas-pump"></i>
@@ -770,26 +898,38 @@ grid-template-columns: 1fr;
 <div class="container">
 <div class="about-content">
 <div class="about-text">
-<h2>About Mangia Auto Motors</h2>
-<p>Founded in 2005, Mangia Auto Motors has established itself as the premier destination for luxury Japanese and German vehicles. Our showroom features the most exclusive models from the world's finest manufacturers.</p>
+<h2>About Mangia Motors</h2>
+<p>Founded in 2005, Mangia Motors has established itself as the premier destination for luxury Japanese and German vehicles. Our showroom features the most exclusive models from the world's finest manufacturers.</p>
 <p>We pride ourselves on exceptional customer service, expert knowledge, and a passion for automotive excellence. Our team of specialists will guide you to the perfect vehicle that matches your lifestyle and preferences.</p>
 
 <div class="about-features">
 <div class="feature">
 <i class="fas fa-check-circle"></i>
-<p>15+ years of industry experience</p>
+<div>
+<h4>15+ Years Experience</h4>
+<p>Industry-leading expertise since 2005</p>
+</div>
 </div>
 <div class="feature">
 <i class="fas fa-check-circle"></i>
-<p>Over 200 luxury vehicles in inventory</p>
+<div>
+<h4>200+ Luxury Vehicles</h4>
+<p>Largest inventory in the region</p>
+</div>
 </div>
 <div class="feature">
 <i class="fas fa-check-circle"></i>
-<p>Certified pre-owned program</p>
+<div>
+<h4>Certified Pre-Owned</h4>
+<p>Rigorous inspection and warranty</p>
+</div>
 </div>
 <div class="feature">
 <i class="fas fa-check-circle"></i>
-<p>Financing and leasing options</p>
+<div>
+<h4>Financing Options</h4>
+<p>Tailored solutions for every budget</p>
+</div>
 </div>
 </div>
 
@@ -797,7 +937,7 @@ grid-template-columns: 1fr;
 </div>
 
 <div class="about-image">
-Premium Showroom Experience
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Showroom">
 </div>
 </div>
 </div>
@@ -821,7 +961,7 @@ Premium Showroom Experience
 </div>
 <div class="contact-text">
 <h4>Showroom Address</h4>
-<p>Karen Road, Kasongo Drive, Next to Total Petrol station</p>
+<p>Kasongo Avenue, Karen Road, Next to Total Karen</p>
 </div>
 </div>
 
@@ -831,7 +971,7 @@ Premium Showroom Experience
 </div>
 <div class="contact-text">
 <h4>Phone Number</h4>
-<p>+254 721786611</p>
+<p>254721786611</p>
 </div>
 </div>
 
@@ -841,7 +981,7 @@ Premium Showroom Experience
 </div>
 <div class="contact-text">
 <h4>Email Address</h4>
-<p>info@mangiaautomotors.com</p>
+<p>info@mangiamotors.com</p>
 </div>
 </div>
 
@@ -859,7 +999,7 @@ Premium Showroom Experience
 </div>
 
 <div class="contact-form">
-<h3>Send a Message</h3>
+<h3>Schedule a Test Drive</h3>
 <form>
 <div class="form-group">
 <label for="name">Full Name</label>
@@ -873,12 +1013,19 @@ Premium Showroom Experience
 
 <div class="form-group">
 <label for="phone">Phone Number</label>
-<input type="tel" id="phone">
+<input type="tel" id="phone" required>
 </div>
 
 <div class="form-group">
 <label for="interest">Vehicle Interest</label>
-<input type="text" id="interest">
+<select id="interest" required>
+<option value="">Select a Vehicle</option>
+<option value="lexus">Lexus LC 500</option>
+<option value="mercedes">Mercedes-AMG GT</option>
+<option value="bmw">BMW M8 Competition</option>
+<option value="audi">Audi R8 V10</option>
+<option value="other">Other Model</option>
+</select>
 </div>
 
 <div class="form-group">
@@ -886,7 +1033,7 @@ Premium Showroom Experience
 <textarea id="message" rows="5" required></textarea>
 </div>
 
-<button type="submit" class="btn">Send Message</button>
+<button type="submit" class="btn">Submit Request</button>
 </form>
 </div>
 </div>
@@ -898,7 +1045,7 @@ Premium Showroom Experience
 <div class="container">
 <div class="footer-content">
 <div class="footer-column">
-<h3>Mangia Auto Motors</h3>
+<h3>Mangia Motors</h3>
 <p>Your premier destination for luxury Japanese and German vehicles. Experience automotive excellence with our curated collection.</p>
 <div class="social-icons">
 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -911,23 +1058,23 @@ Premium Showroom Experience
 <div class="footer-column">
 <h3>Quick Links</h3>
 <ul class="footer-links">
-<li><a href="#">Home</a></li>
-<li><a href="#brands">Brands</a></li>
-<li><a href="#featured">Inventory</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+<li><a href="#brands"><i class="fas fa-chevron-right"></i> Brands</a></li>
+<li><a href="#featured"><i class="fas fa-chevron-right"></i> Inventory</a></li>
+<li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+<li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
 </ul>
 </div>
 
 <div class="footer-column">
 <h3>Brands</h3>
 <ul class="footer-links">
-<li><a href="#">Toyota</a></li>
-<li><a href="#">Lexus</a></li>
-<li><a href="#">Porshe</a></li>
-<li><a href="#">Mercedes-Benz</a></li>
-<li><a href="#">BMW</a></li>
-<li><a href="#">Audi</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Lexus</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Infiniti</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Acura</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Mercedes-Benz</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> BMW</a></li>
+<li><a href="#"><i class="fas fa-chevron-right"></i> Audi</a></li>
 </ul>
 </div>
 
@@ -942,7 +1089,7 @@ Premium Showroom Experience
 </div>
 
 <div class="copyright">
-<p>&copy; 2025 Mangia Auto Motors. All rights reserved. | Designed by Arif Mangia</p>
+<p>&copy; 2023 Mangia Motors. All rights reserved. | Luxury Japanese & German Vehicles</p>
 </div>
 </div>
 </footer>
